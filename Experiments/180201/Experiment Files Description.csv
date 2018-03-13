@@ -1,0 +1,24 @@
+Calcium Indicator,Opsin,Filename,FrameRate,Stimulation Description,Comments,Group,ForRoi
+Gcamp6s,CoChR,FOV1_001,,,Hd of the entire FOV,,
+,,FOV1_002,,,Hd of the entire FOV,,
+,,FOV1_003,,,Hd of the entire FOV,,
+,,FOV1_004,,,hd of the square 1,,
+,,FOV1_005,,Aborted,,,
+,,FOV1_006,7.8,Euler Full Field Photoreceptors Stimulation,square 1,1,yes
+,,FOV1_007,7.8,Moving Bars in eight directions around the center of the FOV,square 1,2,yes
+,,FOV1_008,,,hd of the square 4,,
+,,FOV1_009,7.8,Euler Full Field Photoreceptors Stimulation,square 4,1,yes
+,,FOV1_010,7.8,Moving Bars in eight directions around the center of the FOV,square 4,2,yes
+,,FOV1_011,,,hd of the square 3,,
+,,FOV1_012,,,hd of the square 3,,
+,,FOV1_013,7.8,Euler Full Field Photoreceptors Stimulation,square 3,1,yes
+,,FOV1_014,7.8,Moving Bars in eight directions around the center of the FOV,square 3,2,yes
+,,FOV1_015,,,hd of the square 2,,
+,,FOV1_016,,,hd of the square 2,,
+,,FOV1_017,7.8,Euler Full Field Photoreceptors Stimulation,square 2,1,yes
+,,FOV1_018,7.8,Moving Bars in eight directions around the center of the FOV,square 2,2,yes
+,,FOV1_019,,,hd of the bipolar cells FOV in zoom2,,
+,,FOV1_020,,,hd of the bipolar cells FOV in zoom 2 after pharma,,
+,,FOV1_021,,,hd of the RGCs in zoom 3 after pharma,,
+,,FOV1_022,5.92,Digital Holography stimulation,,,
+,,FOV1_023,5.92,Digital Holography stimulation,,,

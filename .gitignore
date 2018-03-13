@@ -1,0 +1,9 @@
+Experiments/*/*
+!Experiments/*/traces
+!Experiments/*/Experiment Files Description.csv
+
+Visual Stimulation/BinVec
+CellCards
+Dataset
+
+

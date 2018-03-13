@@ -1,0 +1,30 @@
+Calcium Indicator,Opsin,Filename,FrameRate,Stimulation Description,Comments,Group,ForRoi
+Gcamp6s,no opsin expressed just GFP,FOV1big_HD_012,,,HD image of the entire retinal ganglion cell layer,,
+,,FOV1A_HD_013,,,HD of square 2,,
+,,FOV1A_LED_016,"7,8",Euler Full Field Photoreceptors Stimulation,square 2,1,yes
+,,FOV1A_LED_017,"7,8",Moving Bars in eight directions around the center of the FOV,square 2,2,yes
+,,FOV1B_HD_018,,,hd of square 3,,
+,,FOV1B_LED_019,"7,8",Euler Full Field Photoreceptors Stimulation,square 3,1,yes
+,,FOV1B_LED_020,"7,8",Moving Bars in eight directions around the center of the FOV,square 3,2,yes
+,,FOV1C_hD_021,,,hd of square 4,,
+,,FOV1C_LED_022,"7,8",Euler Full Field Photoreceptors Stimulation,square 4,1,yes
+,,FOV1C_LED_023,"7,8",Moving Bars in eight directions around the center of the FOV,square 4,2,yes
+,,FOV1D_HD_024,,,hd of square 1,,
+,,FOV1D_LED_025,"7,8",Euler Full Field Photoreceptors Stimulation,square 1,1,yes
+,,FOV1D_LED_026,"7,8",Moving Bars in eight directions around the center of the FOV,square 1,2,yes
+,,FOV1_HD_postLED027,,,HD image of the entire retinal ganglion cell layer after the LED stimulation,,
+,,FOV1_HD_bipolar_028,,,hd image of the bipolar cells layer,,
+,,FOV1_HOLO_029,"2,96",Different holographic stimulations on the bipolar cell layer,,,
+,,FOV1_HOLO_030,"2,96",,,,
+,,FOV1_HOLO_031,"2,96",,,,
+,,FOV1_HOLO_033,"2,96",,,,
+,,FOV1_HOLO_034,"2,96",,,,
+,,FOV1_HOLO_postF_035,"2,96",Holographic stimulation,Acquisition after 30 minutes of LAP4 application,,
+,,FOV1_HOLO_postF_036,"2,96",Holographic stimulation,Acquisition after 45 minutes of LAP4 application,,
+,,FOV1_LED_postF_037,"7,8",Euler Full Field Photoreceptors Stimulation,On a central FOV of 100x100 um,,
+,,FOV1_HOLO_postF_038,"2,96",Holographic stimulation,Acquisition after 1 h of LAP4 application,,
+,,FOV1_led_postF_039,"7,8",Euler Full Field Photoreceptors Stimulation,On a central FOV of 100x100 um,,
+,,FOV1_holo_postF_040,"2,96",Holographic stimulation,Acquisition after 1h15 of LAP4 application,,
+,,FOV1_led_postF_041,"7,8",Euler Full Field Photoreceptors Stimulation,On a central FOV of 100x100 um,,
+,,FOV1_HOLO_postF_042,"2,96",Holographic stimulation,Acquisition sfter 1h30 of LAP4 application,,
+,,FOV1_HOLO_postF_043,"7,8",Euler Full Field Photoreceptors Stimulation,On a central FOV of 100x100 um,,
