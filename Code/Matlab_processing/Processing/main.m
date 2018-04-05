@@ -1,9 +1,13 @@
 clear;
+close all;
+clc;
+disp 'BUILDING REPOSITORIES'
+rebuildAllH5s();
 disp 'PARSING EULER RESPONSES'
 parseEulerResponses();
 disp 'PARSING BARS RESPONSES'
 parseBarsResponses();
 disp 'BUILDING DATASET'
-buildDataset();
+buildDatasetTable();
 disp 'CLUSTERING'
-gmClustering();
+doClassification();

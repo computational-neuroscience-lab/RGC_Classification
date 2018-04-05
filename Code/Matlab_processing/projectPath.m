@@ -1,3 +1,3 @@
 function path = projectPath()
-path = '~/AllOptical';
+path = '/home/fran_tr/AllOptical';
 
