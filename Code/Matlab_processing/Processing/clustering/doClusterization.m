@@ -1,4 +1,4 @@
-function [clusteringIndexes, clusterProbs, numClusters] = gmClustering(X, nMaxClusters)
+function [clusteringIndexes, clusterProbs, numClusters] = doClusterization(X, nMaxClusters)
 
 nReplicates = 50;
 

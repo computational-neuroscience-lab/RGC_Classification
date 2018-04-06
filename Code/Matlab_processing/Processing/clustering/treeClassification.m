@@ -2,67 +2,84 @@ function treeClassification()
 
 loadDataset()
 
-% CLUSTERING PARAMETERS
+% global parameters
+global refFeatures;
 
-% preliminary clustering
-preTraceMatrix = eulerResponsesMatrix;
-prePcaComponents = 10;
-
-% recursive clustering
 global nIterations;
-global traceMatrices;
 global nPcaComponents;
-global nMaxClusters;
-global sizeMinClusters;
+global features;
+global nMaxBranchings;
 
-nIterations = 2;
-traceMatrices = {stepResponsesMatrix, eulerResponsesMatrix};
-nPcaComponents = [10, 10];
-nMaxClusters = [25, 25];
-sizeMinClusters = 5;
+global admissibleMinSize;
+global admissibleMaxSTD;
+
+global splittableMinSize;
+global splittableMinSTD;
+
+% global structures
+global clustersTable;
+global PCAs;
+
+
+%-------------------------- PARAMETERS ----------------------------------%
+
+% preliminary classification
+refFeatures = eulerResponsesMatrix;
+refNPcaComponents = 10;
+
+% recursive classification
+nIterations = 3;
+features = {eulerResponsesMatrix, eulerResponsesMatrix, eulerResponsesMatrix};
+nPcaComponents = [10, 10, 10];
+nMaxBranchings = [16, 12, 8];
+
+% admissibility check
+admissibleMinSize = 4;
+admissibleMaxSTD = 0.25;
+
+% splittability check
+splittableMinSize = 12;
+splittableMinSTD = 0.2;
+
+%------------------------------------------------------------------------%
+
 
 % INITIALIZE TABLES
-nCells = numel(cellsLabels);
+nCells = numel(cellsTable);
 
 % Initialize structure to store the type code of each cell
-global clustersTable;
-clustersTable = struct( 'Experiment', {cellsLabels.experiment}, ...
-                        'N', {cellsLabels.N}, ...
+clustersTable = struct( 'Experiment', {cellsTable.experiment}, ...
+                        'N', {cellsTable.N}, ...
                         'Type', cell(1, nCells), ...
                         'Prob', cell(1, nCells)  );
             
 % Initialize structure with all the different Principal Component Reductions for each cells
-global PCAs;
 PCAs = struct(  'lvl1', cell(nCells,1), ...
                 'lvl2', cell(nCells,1), ...
                 'lvl3', cell(nCells,1));
 
+            
 % DEFINE CELLS CATEGORIES
 
 % Responsive Cells
-VALIDS = [cellsLabels(:).eulerQT] == 1;
-ONLY_BARS = and([cellsLabels(:).eulerQT] == 0, [cellsLabels(:).barsQT] == 1);
-NO_RESP = and([cellsLabels(:).eulerQT] == 0, [cellsLabels(:).barsQT] == 0);
-NO_AVAIL = and(~VALIDS, and(~ONLY_BARS, ~NO_RESP));
+VALIDS =    [cellsTable(:).eulerQT] == 1;
+ONLY_BARS = and([cellsTable(:).eulerQT] == 0, [cellsTable(:).barsQT] == 1);
+NO_RESP =   and([cellsTable(:).eulerQT] == 0, [cellsTable(:).barsQT] == 0);
+NO_AVAIL =  and(~VALIDS, and(~ONLY_BARS, ~NO_RESP));
 
 % among VALIDS, 4 functional macrotypes
-ONs = and(and([cellsLabels(:).ON] == 1, [cellsLabels(:).OFF] == 0), VALIDS);
-OFFs = and(and([cellsLabels(:).OFF] == 1, [cellsLabels(:).ON] == 0), VALIDS);
-ON_OFFs = and(and([cellsLabels(:).ON] == 1, [cellsLabels(:).OFF] == 1), VALIDS);
-OTHERS = and(and([cellsLabels(:).ON] == 0, [cellsLabels(:).OFF] == 0), VALIDS);
+ONs =       and(and([cellsTable(:).ON] == 1, [cellsTable(:).OFF] == 0), VALIDS);
+OFFs =      and(and([cellsTable(:).ON] == 0, [cellsTable(:).OFF] == 1), VALIDS);
+ON_OFFs =   and(and([cellsTable(:).ON] == 1, [cellsTable(:).OFF] == 1), VALIDS);
+OTHERS =    and(and([cellsTable(:).ON] == 0, [cellsTable(:).OFF] == 0), VALIDS);
 
 % Direction Selectivity
-DSs = [cellsLabels(:).DS] == 1;
+DSs = [cellsTable(:).DS] == 1;
 
 
 % SELECT CLASSES FOR CLUSTERING
-
-% define on which classes to do the clustering:
 typesIndexes = {ONs, OFFs, ON_OFFs, OTHERS, ONLY_BARS, NO_RESP, NO_AVAIL};
 typesNames = ["ON", "OFF", "ON-OFF", "OTHER", "ONLY-BARS", "NO-RESP", "NO_AVAIL"];
-
-% typesIndexes = {VALIDS, ONLY_BARS, NO_RESP, NO_AVAIL};
-% typesNames = ["VALID", "ONLY-BARS", "NO-RESP", "NO_AVAIL"];
 
 for i = 1:numel(typesNames)
     indexesClass_lvl2 = find(typesIndexes{i});
@@ -73,7 +90,7 @@ for i = 1:numel(typesNames)
     end
 end
 
-% Add DS as a subtype to Direction Selective cells
+% Add the DS label to Direction Selective Cells
 dsIndexes = find(DSs);
 dsName = "DS";
 for cIndex = dsIndexes
@@ -81,12 +98,12 @@ for cIndex = dsIndexes
     clustersTable(cIndex).Prob = [clustersTable(cIndex).Prob, 1];
 end
 
-% Then remove DS cells from the clustering dataset
+% Remove DS cells from the dataset for the clustering
 for iClass = 1:numel(typesIndexes)
     typesIndexes{iClass} = and(typesIndexes{iClass}, ~DSs);
 end
 
-% Remove the ONLY_BARS and NO_RESP classes from the clastering dataset
+% Remove the ONLY_BARS, NO_RESP and NO_AVAIL cells from the dataset for the clustering
 classesIndexes = typesIndexes(1:end-3);
 classesNames = typesNames(1:end-3);
 
@@ -94,31 +111,29 @@ classesNames = typesNames(1:end-3);
 % DO CLUSTERING
 
 % Do PCA on the whole dataset.
-% This is only needed to project the 
-% high level classes in a common feature space
+% This is only needed to project the high level classes in a common feature space
 datasetLogical = 0;
 for iClass = 1:numel(classesIndexes)
     datasetLogical = or(classesIndexes{iClass}, datasetLogical);
 end
 datasetIndexes = find(datasetLogical);
 
-prePCA = doPca(preTraceMatrix(datasetLogical, :), prePcaComponents);
+refPCA = doPca(refFeatures(datasetLogical, :), refNPcaComponents);
 for iDataset = 1:length(datasetIndexes)
-    PCAs(datasetIndexes(iDataset)).lvl1 = prePCA(iDataset, :);
+    PCAs(datasetIndexes(iDataset)).lvl1 = refPCA(iDataset, :);
 end
 
 
 % RECURSIVE CLUSTERIZATION
 if nIterations > 0
-    Classification.sub = {};
+    classTree.sub = {};
     for iClass = 1:numel(classesIndexes)
         classIndexes = find(classesIndexes{iClass});
-        sizeCluster = length(classIndexes);
-        if sizeCluster >= sizeMinClusters
-            subclass = recClassification(strcat(classesNames(iClass), "."), classIndexes, 1);
-            Classification.sub = [Classification.sub, subclass];
+        subclass = treeClassification_recursive(strcat(classesNames(iClass), "."), classIndexes, 1);
+        if length(subclass) > 0
+            classTree.sub = [classTree.sub, subclass];
         end
     end
 end
 
-save(getDatasetMat, 'clustersTable', 'PCAs', 'Classification', '-append');
+save(getDatasetMat, 'clustersTable', 'PCAs', 'classTree', '-append');

@@ -67,41 +67,41 @@ for iFigure = 1:nFigures
 end
 
 % Plot Denoise in Euler Responses
-
-nSteps = size(eulerNormResponses, 2);
-nPlots = 5;
-nFigures = 5;
-
-stdResponses = std(eulerNormResponses, 0, 3);
-sigma = mean(stdResponses, 2) * 2;
-
-for iFigure = 1:nFigures
-
-    figure('Name', 'densoised Euler Responses ');
-    for iPlot = 1:nPlots
-        
-        iCell = iPlot + (iFigure-1)*nPlots;
-    
-        subplot(nPlots, 1, iPlot)
-        plot(eulerNormResponses(iCell, :, 1));
-        hold on;
-        filtered = NLmeansfilter(eulerNormResponses(iCell, :, 1), 10, 5, sigma(iCell));
-        plot(filtered, 'LineWidth', 1.5);
-        xlim([0 nSteps])
-        legend({'Raw Trace', 'Denoised Trace'}); 
-        
-
-        ss = get(0,'screensize');
-        width = ss(3);
-        height = ss(4);
-
-        vert = 800;
-        horz = 1600;
-
-        set(gcf,'Position',[(width/2)-horz/2, (height/2)-vert/2, horz, vert]);
-
-    end
-end
+% 
+% nSteps = size(eulerNormResponses, 2);
+% nPlots = 5;
+% nFigures = 5;
+% 
+% stdResponses = std(eulerNormResponses, 0, 3);
+% sigma = mean(stdResponses, 2) * 2;
+% 
+% for iFigure = 1:nFigures
+% 
+%     figure('Name', 'densoised Euler Responses ');
+%     for iPlot = 1:nPlots
+%         
+%         iCell = iPlot + (iFigure-1)*nPlots;
+%     
+%         subplot(nPlots, 1, iPlot)
+%         plot(eulerNormResponses(iCell, :, 1));
+%         hold on;
+%         filtered = NLmeansfilter(eulerNormResponses(iCell, :, 1), 10, 5, sigma(iCell));
+%         plot(filtered, 'LineWidth', 1.5);
+%         xlim([0 nSteps])
+%         legend({'Raw Trace', 'Denoised Trace'}); 
+%         
+% 
+%         ss = get(0,'screensize');
+%         width = ss(3);
+%         height = ss(4);
+% 
+%         vert = 800;
+%         horz = 1600;
+% 
+%         set(gcf,'Position',[(width/2)-horz/2, (height/2)-vert/2, horz, vert]);
+% 
+%     end
+% end
 
 
 

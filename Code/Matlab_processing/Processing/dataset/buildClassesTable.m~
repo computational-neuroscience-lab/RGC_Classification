@@ -1,0 +1,34 @@
+function buildClassesTable()
+
+loadDataset();
+
+% classNames = getLeafClasses();
+classNames = unique([clustersTable.Type]);
+nClasses = length(classNames);
+
+classesTable = struct(  'name',     cell(1, nClasses), ...
+                        'size',     cell(1, nClasses), ...
+                        'indexes',  cell(1, nClasses), ...
+                        'somaMEAN', cell(1, nClasses), ...
+                        'somaSTD', 	cell(1, nClasses), ...
+                        'fluoMEAN', cell(1, nClasses), ...
+                        'fluoSTD',	cell(1, nClasses) ...
+                     );
+
+setResponses = eulerResponsesMatrix(setIndexes, :);
+avgResponse = mean(setResponses, 1);
+stdResponse = std(setResponses, [], 1);
+avgSTD = mean(stdResponse);
+
+for iClass = 1:numel(classNames)
+
+
+    classesTable(iClass).name = classNames(iClass);
+    classesTable(iClass).size = sum(classIndexes(classesTable(iClass).name));
+    classesTable(iClass).indexes = classIndexes(classesTable(iClass).name);
+    classesTable(iClass).somaMEAN = round(mean([cellsTable(classesTable(iClass).indexes).soma]));
+    classesTable(iClass).somaSTD = std([cellsTable(classesTable(iClass).indexes).soma]);
+    classesTable(iClass).fluoMEAN = round(mean([cellsTable(classesTable(iClass).indexes).fluo]));
+    classesTable(iClass).fluoSTD = std([cellsTable(classesTable(iClass).indexes).fluo]);
+end
+save(getDatasetMat, 'classesTable', '-append');    

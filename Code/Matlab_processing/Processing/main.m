@@ -10,4 +10,6 @@ parseBarsResponses();
 disp 'BUILDING DATASET'
 buildDatasetTable();
 disp 'CLUSTERING'
-doClassification();
+treeClassification();
+disp 'BUILDING RESULTS TABLE'
+buildClassesTable();

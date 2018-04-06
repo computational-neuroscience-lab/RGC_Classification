@@ -8,9 +8,9 @@ load(dsPath, 'osK', 'osAngle', 'dsK', 'dsAngle', 'dirModules', 'directions');
 plotAngles = [directions, directions(1)];
 plotMods = [dirModules(idCell,:), dirModules(idCell, 1)];
 
-if  min(plotMods) < 0 
-    plotMods = plotMods -  min(plotMods);
-end
+% if  min(plotMods) < 0 
+%     plotMods = plotMods -  min(plotMods);
+% end
 
 % polarplot(plotAngles, plotMods, 'k', 'LineWidth', 7);
 polarplot(plotAngles, plotMods, 'LineWidth', 1.5);

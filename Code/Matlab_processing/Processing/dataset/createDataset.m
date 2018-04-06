@@ -11,9 +11,10 @@ if sum(strcmp(datasetId, [datasets.name])) > 0
 	return
 end
 
-datasets(numel(dataset) + 1).name = datasetId;
-datasets(numel(dataset) + 1).path = strcat("Datasets/", datasetId, "Matrix.mat");
-activeDataset = datasets(numel(dataset) + 1);
+nRow = numel(datasets) + 1;
+datasets(nRow).name = datasetId;
+datasets(nRow).path = strcat("Datasets/", datasetId, "Matrix.mat");
+activeDataset = datasets(nRow);
 
 try
     save(strcat(projectPath(), '/Datasets/listOfDatasets.mat'), 'activeDataset', 'datasets', '-append');

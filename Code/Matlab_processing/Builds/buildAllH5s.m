@@ -1,4 +1,4 @@
-function rebuildAllH5s()
+function buildAllH5s()
 
 experimentsPath = strcat(projectPath(), '/Experiments/');
 relativeFolderPath = '/traces/';

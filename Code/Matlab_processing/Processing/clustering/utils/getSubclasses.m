@@ -1,28 +1,45 @@
-function [subclassesNames] = getSubclasses(typeId)
-load(getDatasetMat, 'Classification');
+function [names] = getSubclasses(typeId)
+names = [];
 
 if  endsWith(typeId, ".")
     typeId = extractBefore(typeId, strlength(typeId));
 end
+
+
+load(getDatasetMat, 'classTree');
+if strcmp(typeId, "")
+    classes = cell2mat(classTree.sub);
+    if ~isempty(classes) 
+        names = [classes.name];
+        return
+    else
+        error("Class tree is empty")
+    end
+end
+            
 typeSplit = strsplit(typeId, ".");
+type = "";
 
-try
-    if ~strcmp(typeSplit, "")
-        type = "";
-        for iType = 1:numel(typeSplit)
-            type =  strcat(type, typeSplit(iType), ".");
-            subclasses = cell2mat(Classification.sub);
-
-            subclassesNames = [subclasses.name];
-
-            nSubclass = find(strcmp(type, subclassesNames));
-            Classification = Classification.sub{nSubclass};
-        end
+for iType = 1:numel(typeSplit)
+    type =  strcat(type, typeSplit(iType), ".");
+    
+    
+    classes = cell2mat(classTree.sub);
+    if ~isempty(classes) 
+        subNames = [classes.name];
+    else
+        error("Class not existent (tree stops before)")
     end
 
-    subclasses = cell2mat(Classification.sub);
-    subclassesNames = [subclasses.name];
+    nClass = find(strcmp(type, subNames));
+    if ~isempty(nClass) 
+        classTree = classTree.sub{nClass};
+    else
+        error("Class not existent (tree does not include sublabel)")
+    end
+end
 
-catch
-    subclassesNames = [];
+classes = cell2mat(classTree.sub);
+if ~isempty(classes) 
+    names = [classes.name];
 end
