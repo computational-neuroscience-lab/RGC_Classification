@@ -7,10 +7,22 @@ experiments = unique([cellsTable.experiment]);
 barMeans = [];
 barSTD = [];
 
+% Check Bars QI among different experiments 
+% (as some have different number of repetitions)
 for e = experiments
-i = [cellsTable.experiment] == e;
-barMeans = [barMeans, mean([cellsTable(i).barsQI])];
-barSTD = [barSTD, std([cellsTable(i).barsQI])];
+    try
+    i = [cellsTable.experiment] == e;
+    barMeans = [barMeans, mean([cellsTable(i).barsQI])];
+    barSTD = [barSTD, std([cellsTable(i).barsQI])];
+
+    figure;
+    cdfplot([cellsTable(i).barsQI]);
+    title(e);
+    xlabel("cumProbDist");
+    ylabel("barsQI");
+    catch
+        continue
+    end
 end
 
 bar(barMeans)

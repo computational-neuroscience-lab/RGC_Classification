@@ -12,11 +12,13 @@ pcaSpace = {PCAs.(pcaSpaceID)};
 text = strcat("Cell Clusters in 3 principal components from ", pcaSpaceID, " space");
 figure('Name', text);
 
-for typeId = typeIDs
+colors = getColors(numel(typeIDs));
+for iType = 1:numel(typeIDs)
+    typeId = typeIDs(iType);
     cellsIndexes = classIndexes(typeId);
     cellsPCs = cell2mat(pcaSpace(cellsIndexes)');
     
-    scatter3(cellsPCs(:, 1), cellsPCs(:, 2), cellsPCs(:, 3), 'filled');
+    scatter3(cellsPCs(:, 1), cellsPCs(:, 2), cellsPCs(:, 3), [], colors(iType, :), 'filled');
     hold on   
 end    
  hold off
