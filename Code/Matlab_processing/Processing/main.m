@@ -1,8 +1,8 @@
 clear;
 close all;
 clc;
-disp 'BUILDING REPOSITORIES'
-rebuildAllH5s();
+% disp 'BUILDING REPOSITORIES'
+% buildAllH5s();
 disp 'PARSING EULER RESPONSES'
 parseEulerResponses();
 disp 'PARSING BARS RESPONSES'
