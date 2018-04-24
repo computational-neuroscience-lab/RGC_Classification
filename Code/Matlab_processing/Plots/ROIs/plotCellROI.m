@@ -4,8 +4,8 @@ experimentsPath = strcat(projectPath(), '/Experiments/');
 h5RelativePath = '/traces/TracesData.h5';
 videoRelativePath = '/traces/EulerStim.tif';
 
-h5Path = strcat(experimentsPath, expID, h5RelativePath);
-videoPath = strcat(experimentsPath, expID, videoRelativePath);
+h5Path = char(strcat(experimentsPath, expID, h5RelativePath));
+videoPath = char(strcat(experimentsPath, expID, videoRelativePath));
 
 masks = hdf5read(h5Path, '/masks');
 

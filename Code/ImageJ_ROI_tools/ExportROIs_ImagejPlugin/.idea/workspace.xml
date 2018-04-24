@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e7675ad-4ab1-4c37-8571-5e20e08ae388" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_imagej_ij_1_51h.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/libraries/Maven__net_imagej_ij_1_51h.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/src/main/java/org/institut_vision/imagej/BinaryRegion.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/src/main/java/org/institut_vision/imagej/Contour.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ImportROIs_ImagejPlugin/src/main/java/org/institut_vision/imagej/ContourTracer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java" afterPath="$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugins.config" afterPath="$PROJECT_DIR$/src/main/resources/plugins.config" />
+      <change beforePath="$PROJECT_DIR$/target/Export_ROIs_h5-1.0-sources.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/Export_ROIs_h5-1.0.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/institut_vision/imagej/DialogOutput.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/institut_vision/imagej/Extract_ROIs_h5.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugins.config" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../ROIs_tool_Macro.ijm" afterPath="$PROJECT_DIR$/../ROIs_tool_Macro.ijm" />
+      <change beforePath="$PROJECT_DIR$/../../Matlab_processing/Plots/ROIs/plotCellROI.m" afterPath="$PROJECT_DIR$/../../Matlab_processing/Plots/ROIs/plotCellROI.m" />
+      <change beforePath="$PROJECT_DIR$/../../Matlab_processing/Processing/dataset/buildClassesTable.m" afterPath="$PROJECT_DIR$/../../Matlab_processing/Processing/dataset/buildClassesTable.m" />
+      <change beforePath="$PROJECT_DIR$/../../../Datasets/d1Matrix.mat" afterPath="$PROJECT_DIR$/../../../Datasets/d1Matrix.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Datasets/d2Matrix.mat" afterPath="$PROJECT_DIR$/../../../Datasets/d2Matrix.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Datasets/listOfDatasets.mat" afterPath="$PROJECT_DIR$/../../../Datasets/listOfDatasets.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171211/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/171211/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171211/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171211/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171211/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171211/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171211/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171211/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171211/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171211/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171211/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171211/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171212/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/171212/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171212/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171212/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171212/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171212/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171212/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171212/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171212/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171212/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171212/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171212/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171213/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/171213/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171213/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171213/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171213/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171213/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171213/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171213/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171213/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171213/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171213/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171213/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171214/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/171214/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171214/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171214/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171214/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171214/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171214/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171214/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171214/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171214/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171214/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171214/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171218/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/171218/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171218/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171218/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171218/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171218/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171218/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171218/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171218/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171218/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/171218/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/171218/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/Experiment Files Description.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/EulerStim.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/MovingBars.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/TracesData.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/barResponses.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/block_roi.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/dirSelectivity.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/eulerResponses.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/f0.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121901/traces/onOffTyping.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/Experiment Files Description.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/EulerStim.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/MovingBars.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/TracesData.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/barResponses.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/block_roi.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/dirSelectivity.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/eulerResponses.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/f0.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/17121902/traces/onOffTyping.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180115/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180115/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180115/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180115/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180115/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180115/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180115/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180115/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180201/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180201/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180201/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180201/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180201/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180201/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180201/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180201/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180201/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180201/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180201/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180201/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180202/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180202/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180202/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180202/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180202/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180202/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180202/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180202/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180202/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180202/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180202/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180202/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180213/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180213/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180213/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180213/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180213/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180213/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180213/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180213/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180213/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180213/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180213/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180213/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180214/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180214/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180214/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180214/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180214/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180214/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180214/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180214/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180214/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180214/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180214/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180214/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180215/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180215/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180215/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180215/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180215/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180215/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180215/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180215/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180215/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180215/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180215/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180215/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180216/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180216/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180216/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180216/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180216/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180216/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180216/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180216/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180216/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180216/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180216/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180216/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180220/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180220/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180220/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180220/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180220/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180220/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180220/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180220/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180220/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180220/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180220/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180220/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180221/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180221/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180221/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180221/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180221/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180221/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180221/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180221/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180221/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180221/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180221/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180221/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180222/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180222/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180222/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180222/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180222/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180222/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180222/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180222/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180222/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180222/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180222/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180222/traces/onOffTyping.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180314/traces/TracesData.h5" afterPath="$PROJECT_DIR$/../../../Experiments/180314/traces/TracesData.h5" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180314/traces/barResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180314/traces/barResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180314/traces/dirSelectivity.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180314/traces/dirSelectivity.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180314/traces/eulerResponses.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180314/traces/eulerResponses.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180314/traces/f0.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180314/traces/f0.mat" />
+      <change beforePath="$PROJECT_DIR$/../../../Experiments/180314/traces/onOffTyping.mat" afterPath="$PROJECT_DIR$/../../../Experiments/180314/traces/onOffTyping.mat" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Extract_ROIs_h5.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugins.config" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Extract ROIs h5" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="59" />
+    <option name="y" value="-1084" />
+    <option name="width" value="1861" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ExportROIs_ImagejPlugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExportROIs_ImagejPlugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExportROIs_ImagejPlugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExportROIs_ImagejPlugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExportROIs_ImagejPlugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExportROIs_ImagejPlugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExportROIs_ImagejPlugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExportROIs_ImagejPlugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExportROIs_ImagejPlugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ImportROIs_ImagejPlugin" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/institut_vision/imagej" />
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="Extract_ROIs_h5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.institut_vision.imagej.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.institut_vision.imagej.Extract_ROIs_h5" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ExportROIs_ImagejPlugin" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Extract_ROIs_h5" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e7675ad-4ab1-4c37-8571-5e20e08ae388" name="Default" comment="" />
+      <created>1524495608535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524495608535</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="-1084" width="1861" height="1084" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14325069" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25179064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1591623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1125">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugins.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Extract_ROIs_h5.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/institut_vision/imagej/Extract_ROIs_h5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

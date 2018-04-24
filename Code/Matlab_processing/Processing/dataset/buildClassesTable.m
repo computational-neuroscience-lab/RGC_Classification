@@ -15,10 +15,11 @@ classesTable = struct(  'name',     cell(1, nClasses), ...
                         'fluoSTD',	cell(1, nClasses), ...
                         'indexes',  cell(1, nClasses) ...
                      );
-
+sumI = 0;
 for iClass = 1:numel(classNames)
     name = classNames(iClass);
     indexes = classIndexes(name);
+    sumI = indexes + sumI;
     
     setResponses = eulerResponsesMatrix(indexes, :);
     stdResponse = std(setResponses, [], 1);
