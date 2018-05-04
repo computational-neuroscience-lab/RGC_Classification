@@ -4,18 +4,21 @@ macro "Recording PreProcessing [q]" {
 
 	run("Duplicate...", "title=Traces duplicate");
 	run("Gaussian Blur 3D...", "x=0 y=0 z=2");
-	run("Set... ", "zoom=400 x=0 y=0");
+	run("Set... ", "zoom=200 x=0 y=0");
         setLocation(15, 400); 
 
 	run("Z Project...", "projection=[Standard Deviation]");
-	run("LUT... ", "path=["+dir+"Red Hot.lut]"); 
-	run("Set... ", "zoom=1200 x=0 y=0");
+	run("LUT... ", "path=["+dir+"Cyan Hot.lut]"); 
+	run("Set... ", "zoom=600 x=0 y=0");
         setLocation(400, 200); 
 
 
 	run("Synchronize Windows");
 	selectWindow("Synchronize Windows");
-        setLocation(1400, 100); 
+        setLocation(1200, 100); 
+
+	run("Brightness/Contrast...");
+        setLocation(1600, 50); 
 
 	selectWindow("Traces");
 	run("Plot Z-axis Profile");

@@ -1,20 +1,23 @@
-function parseEulerResponses()
+function parseEulerResponses(experimentsCells)
 
 load(strcat(projectPath(), '/VisualStimulations/EulerStim.mat'));
-
-% load each trace for each experiment
 experimentPath = strcat(projectPath, '/Experiments/');
 relativeFolderPath = '/traces/';
-experiments = dir(experimentPath);
 
-for iExperiment = 3 : length(experiments) % exclude current (1) and parent (2) directories
-    experimentFolder = experiments(iExperiment).name;
-    expFolder = strcat(experimentPath, experimentFolder, relativeFolderPath);
+if ~exist('experimentsCells', 'var') 
+    % load each trace for each experiment
+    experimentsStruct = dir(experimentPath);
+    experimentsCells = {experimentsStruct(3:end).name};
+end
+
+for experimentCell = experimentsCells(1:end) % exclude current (1) and parent (2) directories
+    experimentFolder = cell2mat(experimentCell);
+    expPath = strcat(experimentPath, experimentFolder, relativeFolderPath);
         
     fprintf(strcat('Parsing Euler Traces for #', experimentFolder, '...\n'));
 
     % export traces from the .h5 file
-    tracesFile = strcat(expFolder, 'TracesData.h5');
+    tracesFile = strcat(expPath, 'TracesData.h5');
     if exist(tracesFile, 'file') == 0
         error('traces for experiment %s are missing', experimentFolder);
     end
@@ -97,7 +100,7 @@ for iExperiment = 3 : length(experiments) % exclude current (1) and parent (2) d
     % Classify On vs Off
     [isOn, isOff] = onOffCellTyping(median(eulerNormResponses, 3));
     
-    save(strcat(expFolder, 'eulerResponses.mat'), 'eulerResponses', 'eulerNormResponses', 'eulerFilteredResponses', 'eulerAvgResponse', 'stepAvgResponse', 'qualityIndexEuler');    
-    save(strcat(expFolder, 'f0.mat'), 'F0', 'F0_means_On_Trace');
-    save(strcat(expFolder, 'onOffTyping.mat'), 'isOn', 'isOff');
+    save(strcat(expPath, 'eulerResponses.mat'), 'eulerResponses', 'eulerNormResponses', 'eulerFilteredResponses', 'eulerAvgResponse', 'stepAvgResponse', 'qualityIndexEuler');    
+    save(strcat(expPath, 'f0.mat'), 'F0', 'F0_means_On_Trace');
+    save(strcat(expPath, 'onOffTyping.mat'), 'isOn', 'isOff');
 end

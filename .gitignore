@@ -1,9 +1,6 @@
-Experiments/*/*
-!Experiments/*/traces
-!Experiments/*/Experiment Files Description.csv
-
+Experiments/*
 VisualStimulations/BinVec
-CellCards
-Dataset
+CellCards/*
+
 
 

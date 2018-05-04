@@ -1,24 +1,29 @@
-function parseBarsResponses()
+function parseBarsResponses(experimentsCells)
 
 % load each trace for each experiment
 experimentPath = strcat(projectPath, '/Experiments/');
 relativeFolderPath = '/traces/';
-experiments = dir(experimentPath);
 
-for iExperiment = 3 : length(experiments) % exclude current (1) and parent (2) directories
-    experimentFolder = experiments(iExperiment).name;
-    expFolder = strcat(experimentPath, experimentFolder, relativeFolderPath);
+if ~exist('experimentsCells', 'var') 
+    % load each trace for each experiment
+    experimentsStruct = dir(experimentPath);
+    experimentsCells = {experimentsStruct(3:end).name};
+end
+
+for experimentCell = experimentsCells(1:end) % exclude current (1) and parent (2) directories
+    experimentFolder = cell2mat(experimentCell);
+    expPath = strcat(experimentPath, experimentFolder, relativeFolderPath);
 
     fprintf(strcat('Parsing Bars Traces for #', experimentFolder, '...'));
 
     try
         % export traces from the .h5 file
-        tracesFile = strcat(expFolder, 'TracesData.h5');
+        tracesFile = strcat(expPath, 'TracesData.h5');
         traces = hdf5read(tracesFile, '/MovingBars/patterns');
         subtype = h5readatt(tracesFile,'/MovingBars/patterns', 'subtype');
 
         % load other cell infos from previous computations
-        load( strcat(expFolder, 'onOffTyping.mat'), 'isOff');
+        load( strcat(expPath, 'onOffTyping.mat'), 'isOff');
 
         % Load Stimulus Data
         if strcmp(subtype, '')
@@ -43,7 +48,7 @@ for iExperiment = 3 : length(experiments) % exclude current (1) and parent (2) d
         ts_init = init_delay * freqCalciumImaging;
 
         if init_delay < 8
-            load( strcat(expFolder, 'f0.mat'), 'F0');
+            load( strcat(expPath, 'f0.mat'), 'F0');
             avgF0 = mean(F0, 2);
         else
             % we initialize the reference values F0
@@ -58,7 +63,7 @@ for iExperiment = 3 : length(experiments) % exclude current (1) and parent (2) d
         end
         normBarTraces = (traces - avgF0) ./ avgF0;
 
-        % we split the trace in 48 time bins, corresponding to the 48 moving bars
+        % we split the trace in n time bins, corresponding to the n moving bars
         [nTraces, ~] = size(normBarTraces);
         barResponses = zeros(nTraces, round(dts_bar), nBars);
         
@@ -105,8 +110,8 @@ for iExperiment = 3 : length(experiments) % exclude current (1) and parent (2) d
         % compute direction selectivity
         [osK, osAngle, dsK, dsAngle, dirModules] = directionSelectivity(directions, avgBarResponses);
 
-        save(strcat(expFolder, 'barResponses.mat'), 'normBarTraces', 'barResponses', 'barResponsesFiltered', 'barResponsesSorted',  'avgBarResponses', 'qualityIndexBars');
-        save(strcat(expFolder, 'dirSelectivity.mat'), 'osK', 'osAngle', 'dsK', 'dsAngle', 'dirModules', 'directions');  
+        save(strcat(expPath, 'barResponses.mat'), 'normBarTraces', 'barResponses', 'barResponsesFiltered', 'barResponsesSorted',  'avgBarResponses', 'qualityIndexBars');
+        save(strcat(expPath, 'dirSelectivity.mat'), 'osK', 'osAngle', 'dsK', 'dsAngle', 'dirModules', 'directions');  
     catch
             fprintf('\tWARNING: traces unavailable or corrupted');
     end

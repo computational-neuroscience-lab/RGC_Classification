@@ -1,6 +1,8 @@
+function displayDataInfos()
 
 experimentsPath = strcat(projectPath(), '/Experiments/');
 dataRelativePath = '/traces/TracesData.h5';
+roisMat = '/traces/block_roi.mat';
 experiments = dir(experimentsPath);
 
 eulerCells = 0;
@@ -9,8 +11,22 @@ barsCells = 0;
 for i = 3 : length(experiments) % exclude current(1) and parent (2) directories
     experimentFolder = experiments(i).name;
     dataPath = strcat(experimentsPath, experimentFolder, dataRelativePath);
+    roisMatPath = strcat(experimentsPath, experimentFolder, roisMat);
         
     fprintf('Experiment #%d: %s\n', i-2, experimentFolder);
+    
+    try
+        masks = hdf5read(dataPath, '/masks');
+        load(roisMatPath, 'MapId');
+        
+        nROIs = size(masks, 3);
+        nMapIds = size(MapId, 3);
+
+        fprintf('\tROIs: %d \n', nROIs);
+        fprintf('\tMapIds: %d \n', nMapIds);
+    catch
+        fprintf('\tROIs: NOT AVAILABLE\n\n');
+    end   
     
     try
         eulerStim = hdf5read(dataPath, '/EulerStim/patterns');

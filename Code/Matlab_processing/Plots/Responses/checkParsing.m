@@ -67,14 +67,14 @@ for iFigure = 1:nFigures
 end
 
 % Plot Denoise in Euler Responses
-% 
-% nSteps = size(eulerNormResponses, 2);
-% nPlots = 5;
-% nFigures = 5;
-% 
-% stdResponses = std(eulerNormResponses, 0, 3);
-% sigma = mean(stdResponses, 2) * 2;
-% 
+
+nSteps = size(eulerNormResponses, 2);
+nPlots = 5;
+nFigures = 5;
+
+stdResponses = std(eulerNormResponses, 0, 3);
+sigma = mean(stdResponses, 2) * 2;
+
 % for iFigure = 1:nFigures
 % 
 %     figure('Name', 'densoised Euler Responses ');
