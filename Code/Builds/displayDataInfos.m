@@ -1,4 +1,6 @@
 function displayDataInfos()
+% Shows how many cells ROIs and cell traces are available
+% in the TracesData.h5 files for each experiment. 
 
 experimentsPath = strcat(projectPath(), '/Experiments/');
 dataRelativePath = '/traces/TracesData.h5';

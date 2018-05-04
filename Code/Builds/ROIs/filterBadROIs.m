@@ -1,5 +1,6 @@
-function [newMapId, newCenters] = removeBadROIs(MapId, Centers)
-    
+function [newMapId, newCenters] = filterBadROIs(MapId, Centers)
+% Filters out not unique or empty ROIs
+
 nROIs = size(MapId, 3);
 ROIsIndexes = true(1, nROIs);
 

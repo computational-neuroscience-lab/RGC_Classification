@@ -1,6 +1,6 @@
-function build_RoiH5_from_RoiMat(MapId, Centers, experimentFolder)
+function saveROIs_to_h5(MapId, Centers, experimentFolder)
 
-expPath = strcat(projectPath(), '/Experiments/', experimentFolder, '/traces');
+expPath = strcat(projectPath(), '/Experiments/', experimentFolder, '/traces/');
 tracesH5 = strcat(expPath, '/TracesData.h5');
 
 % Create h5

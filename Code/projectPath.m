@@ -1,3 +1,6 @@
 function path = projectPath()
-path = '/home/fran_tr/AllOptical';
+%
+% Returns the path to were 
+%
+path = '/home/fran_tr/AllOptical/RGC_Classification';
 
