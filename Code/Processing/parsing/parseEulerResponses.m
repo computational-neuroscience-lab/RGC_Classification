@@ -1,6 +1,6 @@
 function parseEulerResponses(experimentsCells)
 
-load(strcat(projectPath(), '/VisualStimulations/EulerStim.mat'));
+load(getEulerStimulus)
 experimentPath = strcat(projectPath, '/Experiments/');
 relativeFolderPath = '/traces/';
 
@@ -83,24 +83,25 @@ for experimentCell = experimentsCells(1:end) % exclude current (1) and parent (2
     end
     
     % Average among repetitions
-    eulerAvgResponse = median(eulerFilteredResponses, 3);
+    eulerAvgResponseNotNorm = median(eulerFilteredResponses, 3);
     
     % Cut the step-only response
     ts_response = round(cumsum(responseTimeSequence * freqImaging));
     ts_step_init = ts_response(1);
     ts_step_end = ts_response(3);
-    stepAvgResponse = eulerAvgResponse(:, ts_step_init:ts_step_end);
+    stepAvgResponse = eulerAvgResponseNotNorm(:, ts_step_init:ts_step_end);
     
     % scale
-    peak = max(abs(eulerAvgResponse), [], 2);
-    eulerAvgResponse = eulerAvgResponse ./ peak;
+    peakEuler = max(abs(eulerAvgResponseNotNorm), [], 2);
+    eulerAvgResponse = eulerAvgResponseNotNorm ./ peakEuler;
     peakStep = max(abs(stepAvgResponse), [], 2);
     stepAvgResponse = stepAvgResponse ./ peakStep;
     
     % Classify On vs Off
-    [isOn, isOff] = onOffCellTyping(median(eulerNormResponses, 3));
+    dts = round(cumsum(responseTimeSequence) * freqCalciumImaging); 
+    [isOn_Euler, isOff_Euler] = onOffCellTyping(median(eulerNormResponses, 3), dts(1), dts(2), 50, 10);
     
-    save(strcat(expPath, 'eulerResponses.mat'), 'eulerResponses', 'eulerNormResponses', 'eulerFilteredResponses', 'eulerAvgResponse', 'stepAvgResponse', 'qualityIndexEuler');    
+    save(strcat(expPath, 'eulerResponses.mat'), 'eulerResponses', 'eulerNormResponses', 'eulerAvgResponse', 'eulerAvgResponseNotNorm', 'qualityIndexEuler', 'peakEuler');    
     save(strcat(expPath, 'f0.mat'), 'F0', 'F0_means_On_Trace');
-    save(strcat(expPath, 'onOffTyping.mat'), 'isOn', 'isOff');
+    save(strcat(expPath, 'onOffTyping_Euler.mat'), 'isOn_Euler', 'isOff_Euler');
 end

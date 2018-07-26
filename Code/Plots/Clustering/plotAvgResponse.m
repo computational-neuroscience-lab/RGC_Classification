@@ -1,18 +1,13 @@
-function avgSTD = plotAvgResponse(setIndexes)
+function avgSTD = plotAvgResponse(logicalIndices)
 
-load(getDatasetMat, 'eulerResponsesMatrix');
+load(getDatasetMat, 'tracesMat');
 
-setResponses = eulerResponsesMatrix(setIndexes, :);
+setResponses = eulerResponsesMatrix(logicalIndices, :);
 avgResponse = mean(setResponses, 1);
 stdResponse = std(setResponses, [], 1);
 upSTD = avgResponse + stdResponse / 2;
 downSTD = avgResponse - stdResponse / 2;
 avgSTD = mean(stdResponse);
-
-% for response = setResponses.'
-%     plot(response, 'Color', [0.5, 0.5, 0.5]);
-%     hold on
-% end
 
 x = 1:length(avgResponse);
 x2 = [x, fliplr(x)];

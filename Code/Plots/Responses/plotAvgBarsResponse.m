@@ -1,17 +1,23 @@
 function length = plotAvgBarsResponse(expID, idCell)
 
 experimentsPath = strcat(projectPath(), '/Experiments/');
-simtulusParamsPath = strcat(projectPath(), '/VisualStimulations/MovingBars.mat');
-load(simtulusParamsPath)
+load(getBarsStimulus(expID))
+
 barsRelativePath = '/traces/barResponses.mat';
 barsPath = strcat(experimentsPath, expID, barsRelativePath);
 load(barsPath, 'avgBarResponses', 'qualityIndexBars');
+
+offCliff_ts = round(timeOffset_OffCells * freqCalciumImaging);
+onCliff_ts = round(timeOffset_OnCells * freqCalciumImaging);
 
 [~, length, nDirections] = size(avgBarResponses);
 hold on
 for iDirections = 1:nDirections
     plot(avgBarResponses(idCell, :, iDirections));
 end
+plot([onCliff_ts onCliff_ts], [-1, 1], 'k:');
+plot([offCliff_ts offCliff_ts], [-1, 1], 'k:');
+
 hold off
 xlim([0 length])
 ylim([-1.2 1.2])

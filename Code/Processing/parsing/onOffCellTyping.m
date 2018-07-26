@@ -1,29 +1,23 @@
-function [isON, isOFF] = onOffCellTyping(eulerAvgResponse)
+function [isON, isOFF] = onOffCellTyping(trace, onCliff_ts, offCliff_ts, dSteps_forward, dSteps_back)
 
-load(strcat(projectPath(), '/VisualStimulations/EulerStim.mat'));
-dts = round(cumsum(responseTimeSequence) * freqCalciumImaging);     
+ratio = 4.5;
 
-t0_end = dts(1);
-t0_final = t0_end - 10;
+onBefore_ts = onCliff_ts - dSteps_back;
+onAfter_ts = onCliff_ts + dSteps_forward;
 
-tStep_init = t0_end + 1;
-tStep_mid = tStep_init + 50;
-tStep_end = dts(2);
-tStep_final = tStep_end - 10;
+offBefore_ts = offCliff_ts - dSteps_back;
+offAfter_ts = offCliff_ts + dSteps_forward;
 
-tCliff_init = tStep_end + 1;
-tCliff_mid = tCliff_init + 50;
+baseline_ON_std = std(trace(:, onBefore_ts : onCliff_ts), 0, 2);
+baseline_ON_mean = mean(trace(:, onBefore_ts : onCliff_ts), 2);
+threshold_ON = baseline_ON_mean + ratio * baseline_ON_std;
 
-baseline_ON_std = std(eulerAvgResponse(:, t0_final : t0_end), 0, 2);
-baseline_ON_mean = mean(eulerAvgResponse(:, t0_final : t0_end), 2);
-threshold_ON = baseline_ON_mean + 4.5 * baseline_ON_std;
+baseline_OFF_std = std(trace(:, offBefore_ts : offCliff_ts), 0, 2);
+baseline_OFF_mean = mean(trace(:, offBefore_ts : offCliff_ts), 2);
+threshold_OFF = baseline_OFF_mean + ratio * baseline_OFF_std;
 
-baseline_OFF_std = std(eulerAvgResponse(:, tStep_final : tStep_end), 0, 2);
-baseline_OFF_mean = mean(eulerAvgResponse(:, tStep_final : tStep_end), 2);
-threshold_OFF = baseline_OFF_mean + 4.5 * baseline_OFF_std;
-
-maxON = max(eulerAvgResponse(:, tStep_init : tStep_mid), [], 2);
-maxOFF = max(eulerAvgResponse(:, tCliff_init : tCliff_mid), [], 2);
+maxON = max(trace(:, onCliff_ts + 1 : onAfter_ts), [], 2);
+maxOFF = max(trace(:, offCliff_ts + 1 : offAfter_ts), [], 2);
 
 isON = maxON > threshold_ON;
 isOFF = maxOFF > threshold_OFF;

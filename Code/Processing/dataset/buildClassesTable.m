@@ -21,7 +21,7 @@ for iClass = 1:numel(classNames)
     indexes = classIndexes(name);
     sumI = indexes + sumI;
     
-    setResponses = eulerResponsesMatrix(indexes, :);
+    setResponses = tracesMat(indexes, :);
     stdResponse = std(setResponses, [], 1);
     avgSTD = mean(stdResponse);
 

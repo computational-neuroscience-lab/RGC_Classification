@@ -7,24 +7,22 @@ subplot(4,4,[1,5])
 plotCellROI(expID, nCell);
 
 % On-Off typing
-onOffMat = strcat(projectPath, '/Experiments/', expID, '/traces/onOffTyping.mat');
-load(onOffMat, 'isOff', 'isOn');
-if and(isOn(nCell), isOff(nCell) )
-    title('cell type = ON/OFF');
-elseif isOn(nCell)
-    title('cell type = ON');
-elseif isOff(nCell)
-    title('cell type = OFF');
-else
-    title('cell type = Other');
+load(getDatasetMat, 'clustersTable')
+try
+    idCell = find(and([clustersTable.Experiment] == expID, [clustersTable.N] == nCell));
+    label = clustersTable(idCell).Type;
+catch
+    label = 'Label Unavailable';
 end
+
+title(label);
 
 % plot Euler Responses
 subplot(4,4,[2,3]);   
 plotAvgEulerResponse(expID, nCell);
 
 subplot(4,4,[9,10,11]);     
-plotRawTrace(expID, nCell, 'EulerStim');
+plotRawEulerTrace(expID, nCell);
 
 % plot Euler Stimuli
 subplot(4,4,[6,7]);     

@@ -24,10 +24,6 @@ for iCell = 1:nCells
         directionModules(iCell, :) = directionModules(iCell, :) * -1;
     end
     
-    if (directionModules(iCell,:)<0) > (directionModules(iCell,:)>=0) 
-        directionModules(iCell,:) = -directionModules(iCell,:);
-    end
-    
     dirVectors(iCell, :) = directionModules(iCell, :) .* exp(directions * 1i);
     orVectors(iCell, :) = directionModules(iCell, :) .* exp(directions * 2i);
 

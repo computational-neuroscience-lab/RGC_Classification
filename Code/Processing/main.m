@@ -1,13 +1,13 @@
 clear;
 close all;
 clc;
-disp 'PARSING EULER RESPONSES'
+% disp 'PARSING EULER RESPONSES'
 parseEulerResponses();
-disp 'PARSING BARS RESPONSES'
+% disp 'PARSING BARS RESPONSES'
 parseBarsResponses();
 disp 'BUILDING DATASET'
 buildDatasetTable();
 disp 'CLUSTERING'
-treeClassification();
+mainClustering();
 disp 'BUILDING RESULTS TABLE'
 buildClassesTable();

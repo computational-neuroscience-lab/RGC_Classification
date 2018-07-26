@@ -1,6 +1,5 @@
 function plotClassAvgResponses(typeIDs, titleText)
 
-
 if ~exist('titleText','var')
     titleText = "Average Class Responses";
 end
