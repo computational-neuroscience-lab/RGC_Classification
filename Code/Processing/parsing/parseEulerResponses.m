@@ -89,19 +89,16 @@ for experimentCell = experimentsCells(1:end) % exclude current (1) and parent (2
     ts_response = round(cumsum(responseTimeSequence * freqImaging));
     ts_step_init = ts_response(1);
     ts_step_end = ts_response(3);
-    stepAvgResponse = eulerAvgResponseNotNorm(:, ts_step_init:ts_step_end);
     
     % scale
     peakEuler = max(abs(eulerAvgResponseNotNorm), [], 2);
     eulerAvgResponse = eulerAvgResponseNotNorm ./ peakEuler;
-    peakStep = max(abs(stepAvgResponse), [], 2);
-    stepAvgResponse = stepAvgResponse ./ peakStep;
     
     % Classify On vs Off
     dts = round(cumsum(responseTimeSequence) * freqCalciumImaging); 
     [isOn_Euler, isOff_Euler] = onOffCellTyping(median(eulerNormResponses, 3), dts(1), dts(2), 50, 10);
     
-    save(strcat(expPath, 'eulerResponses.mat'), 'eulerResponses', 'eulerNormResponses', 'eulerAvgResponse', 'eulerAvgResponseNotNorm', 'qualityIndexEuler', 'peakEuler');    
+    save(strcat(expPath, 'eulerResponses.mat'), 'eulerResponses', 'eulerNormResponses', 'eulerAvgResponse', 'eulerAvgResponseNotNorm', 'qualityIndexEuler');    
     save(strcat(expPath, 'f0.mat'), 'F0', 'F0_means_On_Trace');
     save(strcat(expPath, 'onOffTyping_Euler.mat'), 'isOn_Euler', 'isOff_Euler');
 end

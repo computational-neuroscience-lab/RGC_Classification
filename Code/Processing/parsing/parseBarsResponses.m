@@ -112,7 +112,7 @@ for experimentCell = experimentsCells(1:end) % exclude current (1) and parent (2
     % compute direction selectivity
     [osK, osAngle, dsK, dsAngle, dirModules] = directionSelectivity(directions, avgBarResponsesAligned);
 
-    save(strcat(expPath, 'barResponses.mat'), 'normBarTraces', 'barsResponses', 'barResponsesSorted', 'barsResponsesAligned', 'avgBarResponses', 'avgBarResponsesAligned', 'avgBarResponsesNotNorm',  'qualityIndexBars', 'peaksBars');
+    save(strcat(expPath, 'barResponses.mat'), 'normBarTraces', 'barsResponses', 'barResponsesSorted', 'barsResponsesAligned', 'avgBarResponses', 'avgBarResponsesAligned', 'avgBarResponsesNotNorm',  'qualityIndexBars');
     save(strcat(expPath, 'dirSelectivity.mat'), 'osK', 'osAngle', 'dsK', 'dsAngle', 'dirModules', 'directions'); 
     save(strcat(expPath, 'onOffTyping_Bars.mat'), 'isOn_Bars', 'isOff_Bars');
 
