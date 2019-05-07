@@ -4,7 +4,7 @@ function buildData_to_h5(experimentFolder)
 % Computes the calcium traces, and saves everything back
 % in the TracesData.h5 file
 
-tracesPath = strcat(projectPath(), '/Experiments/', experimentFolder, '/traces/TracesData.h5');
+tracesPath = strcat(dataPath, '/', experimentFolder, '/traces/TracesData.h5');
 if exist(tracesPath, 'file') == 0
     error('ROIs information missing!');
 end

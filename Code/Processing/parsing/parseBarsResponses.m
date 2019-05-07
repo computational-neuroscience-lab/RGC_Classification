@@ -1,17 +1,17 @@
-function parseBarsResponses(experimentsCells)
+function parseBarsResponses(experiments)
 
 % load each trace for each experiment
-experimentPath = strcat(projectPath, '/Experiments/');
+experimentPath = strcat(dataPath(), '/');
 relativeFolderPath = '/traces/';
 
 if ~exist('experimentsCells', 'var') 
     % load each trace for each experiment
     experimentsStruct = dir(experimentPath);
-    experimentsCells = {experimentsStruct(3:end).name};
+    experiments = {experimentsStruct(3:end).name}; % exclude current (1) and parent (2) directories
 end
 
-for experimentCell = experimentsCells(1:end) % exclude current (1) and parent (2) directories
-    experimentFolder = cell2mat(experimentCell);
+for experiment = experiments(1:end) 
+    experimentFolder = cell2mat(experiment);
     expPath = strcat(experimentPath, experimentFolder, relativeFolderPath);
     fprintf(strcat('Parsing Bars Traces for #', experimentFolder, '...'));
     

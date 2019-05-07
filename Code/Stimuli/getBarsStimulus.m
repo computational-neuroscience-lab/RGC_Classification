@@ -1,6 +1,6 @@
 function barsStimulus = getBarsStimulus(experimentFolder)
 
-stimH5File = strcat(projectPath, '/Experiments/', experimentFolder, '/traces/TracesData.h5');
+stimH5File = strcat(dataPath(), '/', experimentFolder, '/traces/TracesData.h5');
 barsStimType = h5readatt(stimH5File, '/MovingBars/patterns', 'subtype');
 
 % Load Stimulus Data

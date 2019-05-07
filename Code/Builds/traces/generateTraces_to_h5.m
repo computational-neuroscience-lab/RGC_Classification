@@ -2,7 +2,7 @@ function generateTraces_to_h5(experimentFolder)
 % Extract the Calcium traces for each ROI, and saves them back in the
 % TracesData.h5 file
 
-expPath = strcat(projectPath(), '/Experiments/', experimentFolder, '/traces/');
+expPath = strcat(dataPath(), '/', experimentFolder, '/traces/');
 tracesH5 = strcat(expPath, 'TracesData.h5');
 
 fileID = H5F.open(tracesH5,'H5F_ACC_RDWR','H5P_DEFAULT');

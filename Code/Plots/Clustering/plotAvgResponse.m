@@ -2,7 +2,7 @@ function avgSTD = plotAvgResponse(logicalIndices)
 
 load(getDatasetMat, 'tracesMat');
 
-setResponses = eulerResponsesMatrix(logicalIndices, :);
+setResponses = tracesMat(logicalIndices, :);
 avgResponse = mean(setResponses, 1);
 stdResponse = std(setResponses, [], 1);
 upSTD = avgResponse + stdResponse / 2;
