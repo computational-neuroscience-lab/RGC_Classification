@@ -3,9 +3,9 @@ function pcaTest()
 close all
 nComponents = 10;
 
-load(getDatasetMat, 'stepResponsesMatrix', 'cellsLabels');
+load(getDatasetMat, 'tracesMat', 'cellsLabels');
 
-input = stepResponsesMatrix;
+input = tracesMat;
 [nCells, nDimensions] = size(input);
 
 meanER = mean(input, 1);
